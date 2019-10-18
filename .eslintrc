@@ -2,9 +2,15 @@
 	"env": {
 		"browser": true,
 		"es6": true,
-		"node": true
+		"node": true,
+		"mocha": true
 	},
-	"extends": "eslint:recommended",
+	"extends": [
+		"plugin:mocha/recommended",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:prettier/recommended"
+	],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
@@ -17,24 +23,8 @@
 		"sourceType": "module"
 	},
 	"plugins": [
-		"react"
-	],
-	"rules": {
-		"indent": [
-			"error",
-			"tab"
-		],
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"quotes": [
-			"error",
-			"single"
-		],
-		"semi": [
-			"error",
-			"always"
-		]
-	}
+		"react",
+		"mocha",
+		"prettier"
+	]
 }
